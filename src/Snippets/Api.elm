@@ -1,0 +1,30 @@
+-- module Players.Commands exposing (..)
+--
+-- import Http
+-- import Json.Decode as Decode exposing ((:=))
+-- import Task
+-- import Persons.Actions exposing (..)
+--
+-- fetchAll : Cmd Msg
+-- fetchAll =
+--   Http.get personDecoder fetchAllUrl
+--     |> Task.perform FetchAllFail FetchAllDone
+--
+--
+-- fetchAllUrl : String
+-- fetchAllUrl =
+--   "http://someurl:4000/users"
+--
+-- -- DECODERS
+--
+-- personsDecoder : Decode.Decoder (List Person)
+-- personsDecoder =
+--   Decode.list memberDecoder
+--
+-- personDecoder : Decode.Decoder Person
+-- personDecoder =
+--   Decode.object3
+--   Player
+--   ("id" := Decode.int)
+--   ("name" := Decode.string)
+--   ("age" := Decode.int)
