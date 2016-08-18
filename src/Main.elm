@@ -15,7 +15,7 @@ defaultModel: Person
 defaultModel =
   {
     name = "Emil",
-    age = 28
+    age = 27
   }
 
 -- Model
@@ -37,8 +37,7 @@ update msg person =
   case msg of
     IncrementAge -> { person | age = (person.age + 1) }
     DoNothing -> person
-
-
+    
 -- VIEW
 view : Person -> Html Msg
 view person =
